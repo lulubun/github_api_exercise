@@ -6,7 +6,6 @@ const initialState = {
   totalCt: 0,
   pageNumber: 1,
   details: null,
-  token: null,
 }
 
 const allState = (state=initialState, action) => {
