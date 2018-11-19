@@ -1,11 +1,12 @@
 import * as constants from './constants';
 
 const initialState = {
-    results: [],
-    userNm: null,
-    totalCt: 0,
-    pageNumber: 1,
-    details: null,
+  results: [],
+  userNm: null,
+  totalCt: 0,
+  pageNumber: 1,
+  details: null,
+  token: null,
 }
 
 const allState = (state=initialState, action) => {

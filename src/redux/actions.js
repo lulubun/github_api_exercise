@@ -26,14 +26,14 @@ export const clearDetail = () => {
   })
 }
 
-export const startSearch = (searchTerm, page) => {
+export const startSearch = (searchTerm, page, token) => {
   return dispatch => {
     const encodedTerm = encodeURIComponent(searchTerm);
     const fetchUrl = `${API_URL_BASE}${page}&&q=${encodedTerm}`;
     fetch(fetchUrl, {
       method: "GET",
       headers: {
-          "Authorization": "token 50d6a29ebbb96a1f281545d4cf5b2473627fb8d5",
+          "Authorization": `token ${token}`,
       },
   })
   .then((r) => r.json())
@@ -55,6 +55,24 @@ export const callDetail = (url, star_url) => {
       headers: {
         "Authorization": "token 50d6a29ebbb96a1f281545d4cf5b2473627fb8d5",
       },
+    })
+    .then((r) => r.json())
+    .then(resp => {
+        if (resp.errors) {
+          alert(resp.message)
+        } else {
+          dispatch(setDetail(resp))
+        }
+    })
+    .catch((e) => console.log(e))
+  }
+}
+
+export const loginReq = () => {
+  return dispatch => {
+    const url = 'https://github.com/login/oauth/authorize'
+    fetch(url, {
+      method: "GET",
     })
     .then((r) => r.json())
     .then(resp => {
