@@ -21,12 +21,3 @@ it('renders without crashing', () => {
     div);
   ReactDOM.unmountComponentAtNode(div);
 });
-
-it('renders without crashing', () => {
-  const div = document.createElement('div');
-  const m i, callDetail, details, clearDetail } = this.props;
-  ReactDOM.render(
-    <
-    div);
-  ReactDOM.unmountComponentAtNode(div);
-});
