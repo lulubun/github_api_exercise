@@ -1,6 +1,6 @@
-This is a coding exercise using the [GitHub](https://developer.github.com/v3) api to find information about users.
+This is a coding exercise using the [GitHub](https://developer.github.com/v3) api to find users.
 
-his project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
 
